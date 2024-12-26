@@ -1,4 +1,4 @@
-package com.example.intern.repo;
+package com.example.intern.repository;
 
 import com.example.intern.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
