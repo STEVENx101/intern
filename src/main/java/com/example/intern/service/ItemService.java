@@ -30,5 +30,26 @@ public class ItemService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Item not found"+id));
         return item;
     }
+
+    public void updateItem(Long id, Item item) {
+
+                itemRepository
+                    .findById(id)
+                    .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Invalid item id"+id) );
+
+        item.setId(id);
+        itemRepository.save(item);
+    }
+
+    public void deleteItem(Long id) {
+        
+
+        Item item = itemRepository
+                .findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Item not found"+id));
+        itemRepository.delete(item);
+
+
+    }
     
 }
