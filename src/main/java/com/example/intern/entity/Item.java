@@ -1,5 +1,7 @@
 package com.example.intern.entity;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 
@@ -17,7 +19,9 @@ public class Item {
     @Min(value = 0, message = "Unit price must be greater than 0")
     private Double unitPrice;
 
-   
+    public Item() {
+
+    }
 
     // Constructor with parameters
     public Item(String name, Double unitPrice) {
@@ -50,7 +54,10 @@ public class Item {
         this.unitPrice = unitPrice;
     }
 
-    
+    @OneToMany(mappedBy = "item", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<LineItem> lineItems;
+
+
     @Override
     public String toString() {
         return "Item{" +

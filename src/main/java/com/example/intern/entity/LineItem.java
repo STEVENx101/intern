@@ -25,7 +25,8 @@ public class LineItem {
 
     private Double lineTotal;
 
-   
+ 
+
 
     // Getters and Setters
     public Long getLineItemId() {
