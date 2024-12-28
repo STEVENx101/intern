@@ -16,11 +16,14 @@ import org.springframework.web.bind.annotation.*;
 public class OrderController {
 
     @Autowired
+    // Injects the OrderService
     private OrderService orderService;
 
     @PostMapping
     public ResponseEntity<OrderResponse> placeOrder(@RequestBody OrderRequest orderRequest) {
+        // Call the placeOrder method in the OrderService to process the order
         OrderResponse orderResponse = orderService.placeOrder(orderRequest);
+        // Return a response with the created order and HTTP status code 201 (Created)
         return new ResponseEntity<>(orderResponse, HttpStatus.CREATED);
     }
 }

@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class DiscountService {
 
+    // Injects the DiscountRepository
     @Autowired
     private DiscountRepository discountRepository;
 
+//Retrieves a discount by its code. If the discount is not found, a RuntimeException is thrown
     public Discount getDiscountByCode(String code) {
         return discountRepository.findByCode(code)
                 .orElseThrow(() -> new RuntimeException(" Discount not found with code: " + code));
@@ -19,7 +21,7 @@ public class DiscountService {
 
    
     public Discount save(Discount discount) {
-        
+        //Saves a new or updated discount to the database
         return discountRepository.save(discount);
     }
 }

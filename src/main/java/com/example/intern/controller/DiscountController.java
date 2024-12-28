@@ -13,14 +13,14 @@ public class DiscountController {
     @Autowired
     private DiscountService discountService;
    
-
+    // Creates a new discount
     @PostMapping
     public ResponseEntity<Discount> createDiscount(@RequestBody Discount discount) {
         Discount newDiscount = discountService.save(discount); 
         return ResponseEntity.ok(newDiscount);
     }
 
-
+    // Fetches a discount by code
     @GetMapping("/{code}")
     public ResponseEntity<Discount> getDiscountByCode(@PathVariable String code) {
         Discount discount = discountService.getDiscountByCode(code);

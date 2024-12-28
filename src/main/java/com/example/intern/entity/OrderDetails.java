@@ -23,8 +23,7 @@ public class OrderDetails {
     @OneToMany(mappedBy = "orderDetails", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LineItem> lineItems = new ArrayList<>();
 
-    // Default constructor
-    public OrderDetails() {}
+    
 
     // Getters and Setters
     public Long getOrderId() {

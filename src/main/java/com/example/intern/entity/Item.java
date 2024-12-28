@@ -17,8 +17,7 @@ public class Item {
     @Min(value = 0, message = "Unit price must be greater than 0")
     private Double unitPrice;
 
-    // Default constructor
-    public Item() {}
+   
 
     // Constructor with parameters
     public Item(String name, Double unitPrice) {

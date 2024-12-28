@@ -27,8 +27,7 @@ public class Discount {
     @Max(value = 100, message = "Percentage must not exceed 100")
     private Integer percentage;
 
-    // Default constructor
-    public Discount() {}
+    
 
     // Constructor with parameters
     public Discount(String code, Date validUntil, Integer percentage) {
