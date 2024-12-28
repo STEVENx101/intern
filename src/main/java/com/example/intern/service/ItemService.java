@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.intern.model.Item;
+import com.example.intern.entity.Item;
 import com.example.intern.repository.ItemRepository;
 
 @Service

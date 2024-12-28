@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.intern.entity.Item;
 import com.example.intern.service.ItemService;
-import com.example.intern.model.Item;
+
 import java.util.List; 
 
 @RestController

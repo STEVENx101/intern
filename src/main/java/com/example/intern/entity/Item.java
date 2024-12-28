@@ -1,4 +1,4 @@
-package com.example.intern.model;
+package com.example.intern.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
@@ -51,7 +51,7 @@ public class Item {
         this.unitPrice = unitPrice;
     }
 
-    // toString Method
+    
     @Override
     public String toString() {
         return "Item{" +
